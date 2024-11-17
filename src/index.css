@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Noto Naskh Arabic", serif;
+  }
+}
+
+.article-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.nav-link {
+  @apply px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-200;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-primary mb-6 text-center;
+}
