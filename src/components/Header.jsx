@@ -67,14 +67,15 @@ export default function Header() {
             {menuItems.map((item) => {
               const Icon = item.icon;
               return (
-                <a
-                  key={item.title}
-                  href="#"
-                  className="nav-link items-center gap-2 block py-2"
+                <Link
+                  className="nav-link flex items-center gap-2"
+                  key={item.path}
+                  to={item.path}
+                  style={{ textDecoration: "none", color: "black" }}
                 >
                   <Icon className="w-5 h-5" />
                   <span>{item.title}</span>
-                </a>
+                </Link>
               );
             })}
           </div>

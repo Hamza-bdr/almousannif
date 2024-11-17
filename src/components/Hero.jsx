@@ -1,6 +1,6 @@
 // import { BookOpen } from "lucide-react";
 import logo from "../assets/The-logo.png"; // Ajustez le chemin si nécessaire
-
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div className="bg-gradient-to-b from-primary to-secondary text-white py-16">
@@ -18,9 +18,16 @@ export default function Hero() {
           منصتكم التعليمية المخصصة لتعليم التربية الإسلامية لطلاب المرحلة
           الثانوية!
         </p>
-        <button className="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-200">
-          ابدأ التعلم الآن
-        </button>
+        <Link
+          className="nav-link flex items-center justify-center gap-2"
+          key={"/منطقة-المتعلم"}
+          to={"/منطقة-المتعلم"}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <button className="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-200">
+            ابدأ التعلم الآن
+          </button>
+        </Link>
       </div>
     </div>
   );
