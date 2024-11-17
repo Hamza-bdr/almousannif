@@ -49,20 +49,26 @@ export default function Students() {
     setValue(newValue);
   };
 
-  const coursesData = [
+  const coursesbac1 = [
     {
-      title: "درس 1: العقيدة الإسلامية",
-      description: "مقدمة إلى العقيدة الإسلامية وأهميتها.",
-      previewLink:
-        "https://view.officeapps.live.com/op/embed.aspx?src=YOUR_PPT_LINK",
-      driveLink: "https://drive.google.com/YOUR_DRIVE_LINK",
+      title: "القسم الأول من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1Na70VTHI-fYOeVkY4_8DL-CKcOuJR7e-?usp=drive_link",
     },
     {
-      title: "درس 2: السيرة النبوية",
-      description: "تعرف على حياة النبي محمد صلى الله عليه وسلم.",
-      previewLink:
-        "https://view.officeapps.live.com/op/embed.aspx?src=YOUR_PPT_LINK",
-      driveLink: "https://drive.google.com/YOUR_DRIVE_LINK",
+      title: "القسم الثاني من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/123gE6g_FIZCXNiAHzoqnxqX9AVjqcJ-w?usp=drive_link",
+    },
+    {
+      title: "القسم الثالث من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1Kx5-pzF7wVexi11X5cHmhsSFK7vBRhhQ?usp=drive_link",
+    },
+    {
+      title: "القسم الرابع من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1XboicCY6h6fdIFNMkJjhAXIpv_SDa3ih?usp=drive_link",
     },
   ];
 
@@ -78,19 +84,19 @@ export default function Students() {
             variant="fullWidth"
             aria-label="full width tabs example"
           >
-            <Tab label="الأولى باكالوريا" {...a11yProps(0)} />
-            <Tab label="التانية باكالوريا" {...a11yProps(1)} />
-            <Tab label="التالتة باكالوريا" {...a11yProps(2)} />
+            <Tab label="جدع مشترك" {...a11yProps(0)} />
+            <Tab label="الأولى باكالوريا" {...a11yProps(1)} />
+            <Tab label="الثانية باكالوريا" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Courses title="الأولى باكالوريا" courses={coursesData} />
+          <Courses title="جدع مشترك" courses={coursesbac1} />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Courses title="التانية باكالوريا" courses={coursesData} />
+          <Courses title="الأولى باكالوريا" courses={coursesbac1} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Courses title="التالتة باكالوريا" courses={coursesData} />
+          <Courses title="الثانية باكالوريا" courses={coursesbac1} />
         </TabPanel>
       </Box>
     </div>
