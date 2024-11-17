@@ -17,10 +17,10 @@ export default function Header() {
 
   const menuItems = [
     { title: "الرئيسية", path: "/", icon: BookOpen },
-    { title: "منطقة المتعلم", path: "/learner-area", icon: GraduationCap },
-    { title: "منطقة الأستاذ", path: "/teacher-area", icon: School },
-    { title: "المكتبة", path: "/library", icon: BookMarked },
-    { title: "من نحن؟", path: "/about", icon: Users },
+    { title: "منطقة المتعلم", path: "/منطقة-المتعلم", icon: GraduationCap },
+    { title: "منطقة الأستاذ", path: "/منطقة-الأستاذ", icon: School },
+    { title: "المكتبة", path: "/المكتبة", icon: BookMarked },
+    { title: "من نحن؟", path: "/من-نحن", icon: Users },
   ];
 
   return (

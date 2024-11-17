@@ -14,10 +14,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/learner-area" element={<Students />} />
-          <Route path="/teacher-area" element={<Teachers />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/منطقة-المتعلم" element={<Students />} />
+          <Route path="/منطقة-الأستاذ" element={<Teachers />} />
+          <Route path="/المكتبة" element={<Library />} />
+          <Route path="/من-نحن" element={<About />} />
         </Routes>
         <Footer />
       </div>
