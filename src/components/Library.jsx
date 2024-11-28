@@ -19,6 +19,14 @@ export default function Library() {
     },
     {
       id: 3,
+      title: "القيادة اليوسفية و المنظومة القيمية ",
+      imageUrl:
+        "https://drive.google.com/file/d/1UfT7OhDYzeng6Z49Kny5bw6r3eaYGogj/preview",
+      driveLink:
+        "https://drive.google.com/file/d/1UfT7OhDYzeng6Z49Kny5bw6r3eaYGogj/view?usp=drive_link",
+    },
+    {
+      id: 4,
       title: "الأثار التربوي لضرب الأمثال في القران الكريم",
       imageUrl:
         "https://drive.google.com/file/d/1jcqoVYzJ1qfBEjrLdLC78J_H5p4-tPXr/preview",
