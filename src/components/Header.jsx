@@ -17,8 +17,8 @@ export default function Header() {
 
   const menuItems = [
     { title: "الرئيسية", path: "/", icon: BookOpen },
-    { title: "منطقة المتعلم", path: "/منطقة-المتعلم", icon: GraduationCap },
-    { title: "منطقة الأستاذ", path: "/منطقة-الأستاذ", icon: School },
+    { title: "فضاء المتعلم", path: "/فضاء-المتعلم", icon: GraduationCap },
+    { title: "فضاء الأستاذ", path: "/فضاء-الأستاذ", icon: School },
     { title: "المكتبة", path: "/المكتبة", icon: BookMarked },
     { title: "من نحن؟", path: "/من-نحن", icon: Users },
   ];

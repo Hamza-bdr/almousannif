@@ -14,8 +14,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/منطقة-المتعلم" element={<Students />} />
-          <Route path="/منطقة-الأستاذ" element={<Teachers />} />
+          <Route path="/فضاء-المتعلم" element={<Students />} />
+          <Route path="/فضاء-الأستاذ" element={<Teachers />} />
           <Route path="/المكتبة" element={<Library />} />
           <Route path="/من-نحن" element={<About />} />
         </Routes>

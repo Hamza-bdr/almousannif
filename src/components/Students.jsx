@@ -53,6 +53,28 @@ export default function Students() {
     {
       title: "القسم الأول من المقرر",
       driveLink:
+        "https://drive.google.com/drive/folders/17hwkQa9ME_ysBo7mNDDiELTov83f4EqF?usp=drive_link",
+    },
+    {
+      title: "القسم الثاني من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1Ps6elodJhufo9C5bBUNMUyEXhwiPaOHE?usp=drive_link",
+    },
+    {
+      title: "القسم الثالث من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1skHjtmli-W_4BXQNj2ofhGzRI0gJ1-9N?usp=drive_link",
+    },
+    {
+      title: "القسم الرابع من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/189DeiufWhsciItnZlMvmgfFR8b6kTl5x?usp=drive_link",
+    },
+  ];
+  const coursesbac2 = [
+    {
+      title: "القسم الأول من المقرر",
+      driveLink:
         "https://drive.google.com/drive/folders/1Na70VTHI-fYOeVkY4_8DL-CKcOuJR7e-?usp=drive_link",
     },
     {
@@ -69,6 +91,28 @@ export default function Students() {
       title: "القسم الرابع من المقرر",
       driveLink:
         "https://drive.google.com/drive/folders/1XboicCY6h6fdIFNMkJjhAXIpv_SDa3ih?usp=drive_link",
+    },
+  ];
+  const coursesbac3 = [
+    {
+      title: "القسم الأول من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/15WB8ZMCfnKpeoBHkIjNfL6HPCfZcrlvZ?usp=drive_link",
+    },
+    {
+      title: "القسم الثاني من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1ZMzOBW_5IVPnlu1f-K8LB5UMWAPhsu0O?usp=drive_link",
+    },
+    {
+      title: "القسم الثالث من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1IzECUbAnw5H4EnQQPIfu870d6oNwt-Y_?usp=drive_link",
+    },
+    {
+      title: "القسم الرابع من المقرر",
+      driveLink:
+        "https://drive.google.com/drive/folders/1TC00AaHP67Gw4VQMgGnVyhKs6B1YBC7N?usp=drive_link",
     },
   ];
 
@@ -93,10 +137,10 @@ export default function Students() {
           <Courses title="جدع مشترك" courses={coursesbac1} />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Courses title="الأولى باكالوريا" courses={coursesbac1} />
+          <Courses title="الأولى باكالوريا" courses={coursesbac2} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Courses title="الثانية باكالوريا" courses={coursesbac1} />
+          <Courses title="الثانية باكالوريا" courses={coursesbac3} />
         </TabPanel>
       </Box>
     </div>

@@ -1,5 +1,3 @@
-import Articles from "./Articles";
-
 export default function Teachers() {
   const articles = [
     {
@@ -27,7 +25,23 @@ export default function Teachers() {
   ];
   return (
     <div className="bg-gray-100 min-h-screen p-6">
-      <Articles articles={articles} />
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((book) => (
+          <div
+            key={book.id}
+            className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300"
+          >
+            <h2 className="text-xl font-semibold text-teal-700">
+              {book.title}
+            </h2>
+            <p className="text-gray-500 mt-2">المؤلف: {book.category}</p>
+            <p className="text-gray-600 mt-4">{book.excerpt}</p>
+            <button className="mt-4 bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition-colors duration-300">
+              عرض المزيد
+            </button>
+          </div>
+        ))}
+      </section>
     </div>
   );
 }
