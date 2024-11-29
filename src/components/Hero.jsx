@@ -15,13 +15,12 @@ export default function Hero() {
           مرحبًا بكم في منصة المصنف
         </h1>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          منصتكم التعليمية المخصصة لتعليم التربية الإسلامية لطلاب المرحلة
-          الثانوية!
+          منصتكم التعليمية لمادة التربية الإسلامية في المرحلة الثانوية
         </p>
         <Link
           className="nav-link flex items-center justify-center gap-2"
-          key={"/منطقة-المتعلم"}
-          to={"/منطقة-المتعلم"}
+          key={"/دروس-و-تمارين"}
+          to={"/دروس-و-تمارين"}
           style={{ textDecoration: "none", color: "black" }}
         >
           <button className="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-200">

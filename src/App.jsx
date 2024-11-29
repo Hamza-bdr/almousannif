@@ -6,6 +6,7 @@ import Library from "./components/Library";
 import Footer from "./components/Footer";
 import Students from "./components/Students";
 import Teachers from "./components/Teachers";
+import InnovationVids from "./components/InnovationVids";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/فضاء-المتعلم" element={<Students />} />
+          <Route path="/دروس-و-تمارين" element={<Students />} />
+          <Route path="/من-إبداعات-المتعلمين" element={<InnovationVids />} />
           <Route path="/فضاء-الأستاذ" element={<Teachers />} />
           <Route path="/المكتبة" element={<Library />} />
           <Route path="/من-نحن" element={<About />} />
