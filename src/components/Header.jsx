@@ -14,18 +14,22 @@ import Logo from "./Logo";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const toggleDropdown = (path) => {
+    setActiveDropdown(activeDropdown === path ? null : path);
   };
+
   const menuItems = [
     { title: "الرئيسية", path: "/", icon: BookOpen },
     {
       title: "فضاء المتعلم",
       path: "/فضاء-المتعلم",
       icon: GraduationCap,
-      sub: ["دروس و تمارين", "من إبداعات المتعلمين"],
+      sub: [
+        { title: "دروس و تمارين", path: "/دروس-و-تمارين" },
+        { title: "من إبداعات المتعلمين", path: "/من-إبداعات-المتعلمين" },
+      ],
     },
     { title: "فضاء الأستاذ", path: "/فضاء-الأستاذ", icon: School },
     { title: "المكتبة", path: "/المكتبة", icon: BookMarked },
@@ -46,30 +50,26 @@ export default function Header() {
               return item.sub ? (
                 <div key={item.path} className="relative">
                   <div
-                    onClick={toggleDropdown}
+                    onClick={() => toggleDropdown(item.path)}
                     className="nav-link flex items-center gap-2 text-black cursor-pointer"
                   >
                     <Icon className="w-5 h-5" />
                     <span>{item.title}</span>
                   </div>
 
-                  {/* Menu déroulant */}
-                  {isOpen && (
+                  {/* Desktop Dropdown */}
+                  {activeDropdown === item.path && (
                     <div className="absolute mt-2 bg-white border rounded shadow-lg w-40">
-                      <Link
-                        to="/دروس-و-تمارين"
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
-                        onClick={toggleDropdown}
-                      >
-                        {item.sub[0]}
-                      </Link>
-                      <Link
-                        to="/من-إبداعات-المتعلمين"
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
-                        onClick={toggleDropdown}
-                      >
-                        {item.sub[1]}
-                      </Link>
+                      {item.sub.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          to={subItem.path}
+                          className="block px-4 py-2 text-black hover:bg-gray-100"
+                          onClick={() => toggleDropdown(null)}
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -81,7 +81,7 @@ export default function Header() {
                   style={{ textDecoration: "none", color: "black" }}
                 >
                   <Icon className="w-5 h-5" />
-                  <span>{item.title}</span>{" "}
+                  <span>{item.title}</span>
                 </Link>
               );
             })}
@@ -105,12 +105,37 @@ export default function Header() {
           <div className="md:hidden mt-4 space-y-2">
             {menuItems.map((item) => {
               const Icon = item.icon;
-              return (
+              return item.sub ? (
+                <div key={item.path}>
+                  <div
+                    onClick={() => toggleDropdown(item.path)}
+                    className="nav-link flex items-center gap-2 text-black cursor-pointer"
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span>{item.title}</span>
+                  </div>
+                  {activeDropdown === item.path && (
+                    <div className="ml-4 space-y-2">
+                      {item.sub.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          to={subItem.path}
+                          className="block text-black hover:bg-gray-100"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
                 <Link
                   className="nav-link flex items-center gap-2"
                   key={item.path}
                   to={item.path}
                   style={{ textDecoration: "none", color: "black" }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <Icon className="w-5 h-5" />
                   <span>{item.title}</span>
